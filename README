@@ -1,0 +1,21 @@
+# ENVIROMENT
+
+-e SLAVE=true
+-e SENTINEL=true
+-e TCP_BACKLOG=128
+-e MASTER_NAME=mymaster
+-e QUORUM=2
+-e DOWN_AFTER=5000
+-e FAILOVER_TIMEOUT=60000
+-e PARALLEL_SYNCS=1
+-e REDIS_PORT=6379
+-e SENTINEL_HOST=redis-sentinel
+-e SENTINEL_PORT=26379
+-e MASTER_HOST=0.0.0.0
+-e MASTER_PORT=6379
+
+# DOCKER
+
+docker pull formatcom/redis:5.0.5-alpine
+docker run --rm -it formatcom/redis:5.0.5-alpine
+
